@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+#define MY_AGE 20
+#define MY_HEIGHT 1.8
+
+int main(void) {
+    
+    int my_age = MY_AGE;
+    double my_height = MY_HEIGHT;
+    
+    printf("%d %d %lf", myage, myage, myheight);
+    
+    return 0;
+}
