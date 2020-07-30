@@ -1,0 +1,4 @@
+
+// Counters to count over row and col
+int row = 0;
+int col = 0;

@@ -46,9 +46,11 @@ int main(int argc, char *argv[]) {
 // Note: you will need to convert the 'age' and 'weight' strings 
 // to an integer before storing them in the struct.
 void setup_pet(struct pet *my_pet, char *name, char *type, char *age, char *weight) {
+
     strcpy(pet_my->name, name);
     
     my_pet->age = age;
+    
     // YOUR CODE GOES HERE
 }
 
