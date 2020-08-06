@@ -1,22 +1,21 @@
-
-void function3() {
-    int e = 50;
-}
-
 void function2() {
     int d = 40;
+
 }
 
-void function1() {
+int *function1() {
     int c = 30;
-    function2();
-    function3();
+    return &c;
 }
 
 int main(void) {
     
-    int a = 10;
-    int b = 20;
+    int i = 0;
     
-    function1();
+    while (i < 10000) {
+        
+        int *my_int = malloc(sizeof(int));
+        /// do operations
+        i++;
+    }
 }

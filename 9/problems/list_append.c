@@ -22,15 +22,29 @@ int main() {
     struct node *head2 = nums_to_list(2, nums2);
     print(head2);
     
-    // print(list_append(head1, head2));
+    //print(list_append(head1, head2));
     print(list_append(NULL, head2));
-
     return 0;
 }
 
 struct node *list_append(struct node *list1, struct node *list2) {
     
-    return NULL;
+    // get a pointer to list1's tail
+    struct node *curr = list1;
+    
+    if (curr == NULL) {
+        return list2;
+    }
+    
+    // Assumes curr != NULL
+    while (curr->next != NULL) {
+        curr = curr->next;
+    }
+    // curr points to tail
+    // make the tail of list1 point to the head of list2
+    curr->next = list2;
+    
+    return list1;
 
 }
 
@@ -38,7 +52,16 @@ struct node *list_append(struct node *list1, struct node *list2) {
 // 17 -> 34 -> 51 -> 68 -> X
 void print(struct node *head) {
     
+    struct node *curr = head;
     
+    while (curr != NULL) {
+        
+        printf("%d-> ", curr->data);
+        
+        curr = curr->next;
+    }
+    
+    printf("X\n");
     
 }
 

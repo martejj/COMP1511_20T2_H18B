@@ -14,7 +14,20 @@ struct node *copy(struct node *head) {
 // returns 1 if the two lists are identical, otherwise returns 0
 int identical(struct node *head1, struct node *head2) {
     
-    return 0;
+    struct node *curr1 = head1;
+    struct node *curr2 = head2;
+    
+    while (curr1 != NULL && curr2 != NULL) {
+        
+        if (curr1->data != curr2->data) {
+            return 0; // early exit
+        }
+    
+        curr1 = curr1->next;
+        curr2 = curr2->next;
+    }
+    
+    return curr1 == NULL && curr2 == NULL;
 }
 
 // returns 1 if list is in strictly increasing order, otherwise returns 0

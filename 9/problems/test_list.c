@@ -228,7 +228,6 @@ void test_identical(void) {
     assert(identical(test1, NULL) == 0);    // check NULL works in either argument
     assert(identical(NULL, test1) == 0);
 
-
     printf("-- Test 2: Identical lists --\n");
     assert(identical(test1, test2) == 1);
     assert(identical(test2, test1) == 1);
